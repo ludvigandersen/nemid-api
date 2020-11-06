@@ -21,7 +21,7 @@ class GendersController < ApplicationController
     @gender = Gender.new(gender_params)
 
     if @gender.save
-      render json: @gender, status: 201
+      render json: { message: "Gender successfully created" }, status: 201
     else
       render json: @gender.errors, status: 422
     end

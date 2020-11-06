@@ -3,4 +3,8 @@ Rails.application.routes.draw do
 
   resources :genders
   resources :users
+
+  get '/authenticate', to: 'users#authenticate'
+  post '/change-password', to: 'users#change_password'
+  post '/reset-password', to: 'users#reset_password'
 end
